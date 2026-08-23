@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Munir Hussain is a passionate Front-End Developer specializing in HTML, CSS, Bootstrap, and JavaScript. Explore my portfolio, projects, skills, and web development work."
+      content="Munir Hussain is a passionate Front-End Developer specializing in HTML, CSS, Bootstrap 5, Tailwind CSS, and JavaScript. Explore my portfolio, projects, skills, and web development work."
     />
     <title>Munir Hussain | Front-End Developer</title>
     <link
@@ -18,6 +18,7 @@
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
   </head>
   <body>
@@ -28,7 +29,6 @@
           <img
             src="./assets/images/logo.webp"
             width="50px"
-            height="auto"
             alt="Munir's logo"
           />
           <div class="logo-text">
@@ -100,13 +100,16 @@
             <div class="rotate-icons-container">
               <div class="html"><i class="ri-html5-fill"></i></div>
               <div class="css"><i class="ri-css3-fill"></i></div>
+              <div class="bootstrap"><i class="ri-bootstrap-fill"></i></div>
               <div class="js"><i class="ri-javascript-fill"></i></div>
+              <div class="tailwind"><i class="ri-tailwind-css-fill"></i></div>
             </div>
             <div id="hero-image">
               <img
                 src="./assets/images/my-photo.webp"
                 width="180px"
                 height="180px"
+                fetchpriority="high"
                 alt="Munir's Photo"
               />
             </div>
@@ -250,8 +253,8 @@
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
-                <h3>Tailwind Css</h3>
-                <p>Planning to learn Tailwind CSS in the future.</p>
+                <h3>Tailwind CSS</h3>
+                <p>Currently Exploring Tailwind CSS.</p>
               </div>
             </div>
             <div class="journey-item">
@@ -259,7 +262,7 @@
               <div class="journey-item-content">
                 <h3>JavaScript</h3>
                 <p>
-                  Completed core JavaScript concepts and built interactive web
+                  Learned core JavaScript concepts and built interactive web
                   projects.
                 </p>
               </div>
@@ -323,12 +326,12 @@
                   <ul>
                     <li>Tailwind Css</li>
                   </ul>
-                  <span>5%</span>
+                  <span>25%</span>
                 </div>
                 <div class="skill-bar">
                   <div
                     class="skill-progress tailwind-bar"
-                    data-width="5%"
+                    data-width="25%"
                   ></div>
                 </div>
               </div>
@@ -397,9 +400,21 @@
               </div>
               <div class="tool-card">
                 <span class="tool-icon">
+                  <i class="ri-vercel-line"></i>
+                </span>
+                <span class="tool-text">Vercel</span>
+              </div>
+              <div class="tool-card">
+                <span class="tool-icon">
                   <i class="ri-remixicon-line"></i>
                 </span>
                 <span class="tool-text">Remix Icon</span>
+              </div>
+              <div class="tool-card">
+                <span class="tool-icon">
+                  <i class="ri-claude-line"></i>
+                </span>
+                <span class="tool-text">AI Tools</span>
               </div>
               <div class="tool-card">
                 <span class="tool-icon">
@@ -421,7 +436,6 @@
               <img
                 src="./assets/images/Landing-page.webp"
                 width="280px"
-                height="auto"
                 alt="Landing page website image"
               />
             </div>
@@ -460,7 +474,6 @@
               <img
                 src="./assets/images/DoIt-task-mange.webp"
                 width="280px"
-                height="auto"
                 alt="DoIt Task Manager"
               />
             </div>
@@ -500,7 +513,6 @@
               <img
                 src="./assets/images/Asma-ul-husna.webp"
                 width="280px"
-                height="auto"
                 alt="Asma-ul-husana website"
               />
             </div>
@@ -581,7 +593,7 @@
                 <i class="ri-whatsapp-line"></i>
               </a>
               <a
-                href="#"
+                href="https://munir-hussain-portfolio.vercel.app"
                 class="website-icon"
                 target="_blank"
                 aria-label="website"
@@ -602,7 +614,7 @@
                 placeholder="Your Full Name"
                 required
               />
-              <span class="error-message"></span>
+              <span class="error-message name-error"></span>
             </div>
             <div class="label-input">
               <label for="mail">E-mail <span>*</span></label>
@@ -613,7 +625,7 @@
                 placeholder="Your Email Address"
                 required
               />
-              <span class="error-message"></span>
+              <span class="error-message mail-error"></span>
             </div>
             <div class="label-input">
               <label for="message">Message <span>*</span></label>
@@ -623,7 +635,7 @@
                 required
                 placeholder="Your Message"
               ></textarea>
-              <span class="error-message"></span>
+              <span class="error-message message-error"></span>
             </div>
             <button class="form-btn" type="submit">
               <span><i class="ri-send-ins-line"></i></span>
@@ -641,7 +653,6 @@
             <img
               src="./assets/images/logo.webp"
               width="50px"
-              height="auto"
               alt="Munir's logo"
             />
             <div class="footer-logo-text">
@@ -702,7 +713,7 @@
               <i class="ri-whatsapp-line"></i>
             </a>
             <a
-              href="#"
+              href="https://munir-hussain-portfolio.vercel.app"
               class="website-icon"
               target="_blank"
               aria-label="website"
@@ -719,7 +730,9 @@
         </p>
       </div>
     </footer>
-    <a href="#home" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+    <a href="#home" aria-label="Go to top" class="back-to-top"
+      ><i class="ri-arrow-up-line"></i
+    ></a>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -38,6 +38,12 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg);
@@ -181,7 +187,8 @@ nav ul li a.active::after {
     color: var(--primary-color);
     transform: translateY(-3px);
 }
-.download-cv-btn:hover::before{
+
+.download-cv-btn:hover::before {
     width: 100%;
 }
 
@@ -641,34 +648,51 @@ header.scroll {
 
 .html,
 .css,
-.js {
+.js,
+.bootstrap,
+.tailwind {
     position: absolute;
     animation: rotation 18s linear infinite reverse;
 }
 
 .html i,
 .css i,
-.js i {
+.bootstrap i,
+.js i,
+.tailwind i {
     font-size: 2rem;
 }
 
 .html {
-    top: 7%;
+    top: 6%;
     left: 13%;
     color: #E34F26;
 }
 
 .css {
-    top: 34%;
-    right: -4%;
+    top: 7%;
+    right: 11%;
     color: #1572B6;
 }
 
+.bootstrap {
+    bottom: 29%;
+    right: -3%;
+    color: #7618db;
+}
+
 .js {
-    bottom: -1%;
-    left: 25%;
+    bottom: -5%;
+    left: 45%;
     color: #f7df1e;
 }
+
+.tailwind {
+    bottom: 29%;
+    left: -2%;
+    color: #38bdf8;
+}
+
 
 
 
@@ -906,6 +930,7 @@ header.scroll {
     background-color: #02474529;
     background-color: var(--card-bg);
     backdrop-filter: blur(6px);
+    cursor: pointer;
     transition: var(--transition);
 }
 
@@ -1444,11 +1469,15 @@ header.scroll {
     box-shadow: var(--card-box-shadow);
 }
 
+.error:focus {
+    border-color: #ff0000 !important;
+    box-shadow: 0px 0px 15px #9f0f0fd9 !important;
+}
+
 .error-message {
     color: #ff0000;
     font-size: .8rem;
     letter-spacing: 1.3px;
-    display: none;
 }
 
 .form-btn {
@@ -1467,7 +1496,7 @@ header.scroll {
     transition: var(--transition);
 }
 
-.submit-message{
+.submit-message {
     text-align: center;
     color: #05df72;
     font-weight: 500;
@@ -1632,6 +1661,7 @@ footer {
     border: 1px solid var(--secondary-color);
     cursor: pointer;
     transform: translate3d(100px, -100px, -100px);
+    opacity: 0;
     transition: var(--transition);
 }
 
@@ -1653,4 +1683,5 @@ footer {
 
 .back-to-top.show {
     transform: translate(0);
+    opacity: 1;
 }
