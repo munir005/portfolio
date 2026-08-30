@@ -29,6 +29,16 @@ document.addEventListener("mousemove", (e) => {
 });
 
 //  -----    navbar scroll effect
+
+window.addEventListener("wheel", (e) => {
+  console.log(e.deltaY);
+  if (e.deltaY > 0) {
+    header.classList.add("hide");
+  } else {
+    header.classList.remove("hide");
+  }
+});
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 60) {
     header.classList.add("scroll");
@@ -163,10 +173,8 @@ form.addEventListener("submit", (val) => {
   // if all true then submit the form
   if (isNameCorrect && isMailCorrect && isMessageCorrect) {
     submittedMessage.style.display = "block";
-    fullNameInput.value = "";
-    mailInput.value = "";
-    messageTextarea.value = "";
-    setInterval(() => {
+    form.reset();
+    setTimeout(() => {
       submittedMessage.style.display = "none";
     }, 5000);
   }

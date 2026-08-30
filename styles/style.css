@@ -238,7 +238,7 @@ nav ul li a.active::after {
 /* -----      Scroll      ---------  */
 
 header.scroll {
-    top: .7rem;
+    top: 1rem;
     background: transparent;
 }
 
@@ -253,6 +253,10 @@ header.scroll {
     border: 1px solid #ffffff14;
     border-radius: 1rem;
     box-shadow: 0 10px 30px #00000026;
+}
+
+header.hide{
+    top: -6rem;
 }
 
 
@@ -650,7 +654,9 @@ header.scroll {
 .css,
 .js,
 .bootstrap,
-.tailwind {
+.tailwind,
+.react {
+    z-index: 1;
     position: absolute;
     animation: rotation 18s linear infinite reverse;
 }
@@ -659,25 +665,26 @@ header.scroll {
 .css i,
 .bootstrap i,
 .js i,
-.tailwind i {
+.tailwind i,
+.react i {
     font-size: 2rem;
 }
 
 .html {
-    top: 6%;
-    left: 13%;
+    top: -5%;
+    left: 44%;
     color: #E34F26;
 }
 
 .css {
-    top: 7%;
-    right: 11%;
+    top: 22%;
+    right: -1%;
     color: #1572B6;
 }
 
 .bootstrap {
-    bottom: 29%;
-    right: -3%;
+    bottom: 18%;
+    right: 1%;
     color: #7618db;
 }
 
@@ -688,13 +695,16 @@ header.scroll {
 }
 
 .tailwind {
-    bottom: 29%;
-    left: -2%;
-    color: #38bdf8;
+    bottom: 21%;
+    left: 1%;
+    color: #00BCFF;
 }
 
-
-
+.react {
+    top: 20%;
+    left: 1%;
+    color: #58C4DC;
+}
 
 
 
@@ -812,7 +822,7 @@ header.scroll {
     background-color: var(--black);
     font-size: .7rem;
     font-weight: 600;
-    color: #b2dfff;
+    color: var(--light-color);
 }
 
 
@@ -1089,7 +1099,7 @@ header.scroll {
 }
 
 .skill-progress {
-    background: linear-gradient(90deg, #27738ac5, #6c63ff);
+    background: linear-gradient(90deg, var(--secondary-color), var(--light-color));
     height: 100%;
     border-radius: 2rem;
     transition: all .8s .3s linear;
@@ -1298,7 +1308,7 @@ header.scroll {
 .live-preview-btn i {
     display: inline-block;
     font-size: 1.5rem;
-    transition: transform .5s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 .live-preview-btn:hover i {
@@ -1577,7 +1587,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    min-width: 260px;
+    min-width: 250px;
 }
 
 .footer-links h4 {
@@ -1654,13 +1664,14 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 10;
     padding: .6rem;
     border-radius: 50%;
     background-color: var(--primary-color);
     color: var(--light-color);
     border: 1px solid var(--secondary-color);
     cursor: pointer;
-    transform: translate3d(100px, -100px, -100px);
+    transform: translate3d(100px, -100px, -100px) scale(.4);
     opacity: 0;
     transition: var(--transition);
 }
@@ -1674,7 +1685,6 @@ footer {
 .back-to-top:hover {
     border-color: var(--light-color);
     box-shadow: var(--card-box-shadow);
-    transform: scale(1.02);
 }
 
 .back-to-top:hover i {
@@ -1682,6 +1692,6 @@ footer {
 }
 
 .back-to-top.show {
-    transform: translate(0);
+    transform: translate(0) scale(1);
     opacity: 1;
 }

@@ -152,6 +152,11 @@
     .footer-social-links span {
         text-align: start;
     }
+
+    .contact-right {
+        border-radius: 1rem;
+        padding: 1rem;
+    }
 }
 
 @media (max-width:390px) {
