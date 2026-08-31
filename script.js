@@ -30,16 +30,18 @@ document.addEventListener("mousemove", (e) => {
 
 //  -----    navbar scroll effect
 
-window.addEventListener("wheel", (e) => {
-  console.log(e.deltaY);
-  if (e.deltaY > 0) {
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
     header.classList.add("hide");
   } else {
     header.classList.remove("hide");
   }
-});
+  lastScrollY = currentScrollY;
 
-window.addEventListener("scroll", () => {
   if (window.scrollY > 60) {
     header.classList.add("scroll");
     navbarContainer.classList.add("scroll");
