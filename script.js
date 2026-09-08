@@ -17,7 +17,7 @@ const mailError = document.querySelector(".mail-error");
 const messageError = document.querySelector(".message-error");
 const submittedMessage = document.querySelector(".submit-message");
 
-//   ------     Move the dot with cursor
+//   ------     Move the Custom Cursor with cursor
 const mouseDot = document.querySelector(".mouse-dot");
 document.addEventListener("mousemove", (e) => {
   const x = e.clientX;
@@ -33,7 +33,7 @@ document.addEventListener("mousemove", (e) => {
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  
+  // Its Check when the user scroll down the screen the header hides itself and when user scroll up the screen the header was shown
   const currentScrollY = window.scrollY;
   if (currentScrollY > lastScrollY && currentScrollY > 100) {
     header.classList.add("hide");
@@ -41,7 +41,11 @@ window.addEventListener("scroll", () => {
     header.classList.remove("hide");
   }
   lastScrollY = currentScrollY;
-
+  // when user on mobile screen and the open the navbar then it controlled that if user scroll the screen the navbar automat hide
+  if (navbar.classList.contains("show")){
+    hideNavbar();
+  }
+  // when user scroll the screen first time the header take the dark effect 
   if (window.scrollY > 60) {
     header.classList.add("scroll");
     navbarContainer.classList.add("scroll");
@@ -53,13 +57,11 @@ window.addEventListener("scroll", () => {
   }
 
   //   show the back to top button on scroll
-
   window.outerHeight < window.scrollY
     ? BackToTopBtn.classList.add("show")
     : BackToTopBtn.classList.remove("show");
 
   //   active the link according to the current section
-
   let currentSection = "";
   linkedSection.forEach((section) => {
     const sectionHeight = section.clientHeight;
@@ -97,7 +99,7 @@ navLinks.forEach((link) => {
     hideNavbar();
   });
 });
-
+// Animate the skills when the user reached the skills section
 const skillObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -114,13 +116,11 @@ const skillObserver = new IntersectionObserver(
     threshold: 0.5,
   },
 );
-
 skillsCard.forEach((skill) => {
   skillObserver.observe(skill);
 });
 
-// ---  Form valid code
-
+// ---  Form validation code
 form.addEventListener("submit", (val) => {
   val.preventDefault();
   let isNameCorrect = false;
@@ -178,6 +178,17 @@ form.addEventListener("submit", (val) => {
     form.reset();
     setTimeout(() => {
       submittedMessage.style.display = "none";
-    }, 5000);
+    }, 3000);
   }
+});
+
+// ------  Preloader
+window.addEventListener("load", () => {
+    const preloader = document.querySelector("#preloader");
+    setTimeout(() => {
+        preloader.classList.add("hide");
+
+        // Tell animate.js that the website is ready
+        document.dispatchEvent(new Event("websiteLoaded"));
+    }, 300);
 });

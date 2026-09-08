@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Munir Hussain is a passionate Front-End Developer specializing in HTML, CSS, Bootstrap 5, Tailwind CSS, and JavaScript. Explore my portfolio, projects, skills, and web development work."
+      content="Munir Hussain is a passionate Front-End Developer specializing in HTML, CSS, Bootstrap 5, Tailwind CSS, JavaScript, and React.js. Explore my portfolio, projects, skills, and web development work."
     />
     <title>Munir Hussain | Front-End Developer</title>
     <link
@@ -22,7 +22,28 @@
     />
   </head>
   <body>
+    <!--===           Preloader          ===-->
+    <div id="preloader">
+      <div class="preloader-content">
+        <div class="loader-container">
+          <img
+            src="./assets/images/logo.webp"
+            alt="Munir Hussain"
+            class="preloader-logo"
+          />
+          <div class="ring ring1"></div>
+          <div class="ring ring2"></div>
+          <div class="ring ring3"></div>
+          <div class="ring ring4"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+
+    <!--===      custom cursor       ===-->
     <div class="mouse-dot"></div>
+
+    <!--=====    Header     =====-->
     <header>
       <div class="nav-bar-container">
         <div class="logo">
@@ -46,7 +67,7 @@
           </ul>
         </nav>
         <a
-          href="./assets/Munir-Hussain-resume.pdf"
+          href="./assets/Munir-Hussain-Resume.pdf"
           download="Munir-Hussain-resume.pdf"
           class="download-cv-btn nav-btn"
         >
@@ -57,9 +78,13 @@
         </button>
       </div>
     </header>
+
     <main>
+      <!--=====      Hero Section code     ======-->
       <section id="home" class="hero section linked-section">
+        <!--  Bright effect at the top right side of the hero section -->
         <div class="bright" aria-hidden="true"></div>
+        <!-- Moving particles at of hero section -->
         <div class="hero-particles" aria-hidden="true">
           <span></span>
           <span></span>
@@ -74,14 +99,16 @@
           <span></span>
           <span></span>
         </div>
+        <!--===   Left content of hero section  ===-->
         <div class="left-side-hero">
           <span class="tag">Hello, I'm</span>
-          <h1 class="hero-heading gradient-text">Munir Hussain</h1>
+          <h1 class="hero-heading">Munir Hussain</h1>
           <div class="hero-info">Frontend Developer</div>
           <p class="hero-pera">
             I build responsive, accessible, and high-performance websites using
             modern frontend technologies.
           </p>
+          <!--===    hero buttons    ===-->
           <div class="hero-btns">
             <a class="view-work-btn" href="#projects"
               >View Work <i class="ri-arrow-right-line"></i
@@ -89,14 +116,17 @@
             <a
               class="download-cv-btn hero-cv-btn"
               download="Munir-Hussain-resume.pdf"
-              href="./assets/Munir-Hussain-resume.pdf"
+              href="./assets/Munir-Hussain-Resume.pdf"
             >
               Resume <i class="ri-download-line"></i>
             </a>
           </div>
         </div>
+
+        <!--====    Right content of Hero section    ===-->
         <div class="right-side-hero">
           <div class="hero-image-container">
+            <!--  Rotating Icons of the hero image section  -->
             <div class="rotate-icons-container">
               <div class="html"><i class="ri-html5-fill"></i></div>
               <div class="css"><i class="ri-css3-fill"></i></div>
@@ -105,6 +135,7 @@
               <div class="tailwind"><i class="ri-tailwind-css-fill"></i></div>
               <div class="react"><i class="ri-reactjs-line"></i></div>
             </div>
+            <!--====     Hero Image     ====-->
             <div id="hero-image">
               <img
                 src="./assets/images/my-photo.webp"
@@ -117,11 +148,16 @@
           </div>
         </div>
       </section>
+
+      <!--=====     About Section code     =====-->
       <section class="about-section section linked-section" id="about">
         <h2 class="section-heading">
           About <span class="gradient-text">Me</span>
         </h2>
+
+        <!-- First container of About section -->
         <div class="about-me-container">
+          <!-- Left content of about first section -->
           <div class="about-left-side">
             <div class="about-image-container">
               <div id="about-image">
@@ -135,7 +171,9 @@
               <span class="about-image-tag">✦ Web Developer</span>
             </div>
           </div>
+          <!-- Right content of about first section -->
           <div class="about-right-side">
+            <!-- About section pera -->
             <div class="about-pera">
               <p class="pera-1">
                 I'm a passionate Frontend Developer who loves to build
@@ -147,6 +185,7 @@
                 simple, beautiful and intuitive designs.
               </p>
             </div>
+            <!-- About sections cards/Tags -->
             <div class="about-tags-container">
               <div class="about-tag">
                 <i class="ri-code-s-slash-line"></i>
@@ -179,7 +218,10 @@
             </div>
           </div>
         </div>
+
+        <!-- Experience/Education Container of the About section -->
         <div class="experience-section">
+          <!-- Education Card -->
           <div class="experience-card">
             <div class="experience-card-header">
               <span>🎓</span>
@@ -193,20 +235,21 @@
               </ul>
             </div>
           </div>
+          <!-- Experience Card -->
           <div class="experience-card">
             <div class="experience-card-header">
               <span>💼</span>
               <h4 class="gradient-text">Experience</h4>
             </div>
             <div class="experience-card-body">
-              <h5>Web Development Intern</h5>
               <ul class="list">
-                <li>Elevvo Pathways</li>
-                <li>PTTI, Pakpattan</li>
-                <li>Building Projects</li>
+                <li>Elevvo Pathways <strong>(Internship)</strong></li>
+                <li>PTTI, Pakpattan <strong>(Internship)</strong></li>
+                <li>Building Projects Daily</li>
               </ul>
             </div>
           </div>
+          <!-- Certificates Card -->
           <div class="experience-card">
             <div class="experience-card-header">
               <span>🥇</span>
@@ -223,11 +266,14 @@
             </div>
           </div>
         </div>
+
+        <!-- Journey Container of the about section -->
         <div class="about-journey">
           <h2 class="section-heading">
             Learning <span class="gradient-text">Journey</span>
           </h2>
           <div class="journey-container">
+            <!-- HTML Journey Card -->
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
@@ -235,6 +281,7 @@
                 <p>Completed HTML fundamentals and built multiple projects.</p>
               </div>
             </div>
+            <!-- CSS Journey Card -->
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
@@ -245,6 +292,7 @@
                 </p>
               </div>
             </div>
+            <!-- Bootstrap Journey Card -->
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
@@ -255,6 +303,7 @@
                 </p>
               </div>
             </div>
+            <!-- JavaScript Journey Card -->
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
@@ -265,6 +314,7 @@
                 </p>
               </div>
             </div>
+            <!-- Tailwind CSS Journey Card -->
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
@@ -272,6 +322,7 @@
                 <p>Currently Exploring Tailwind CSS.</p>
               </div>
             </div>
+            <!-- React.js Journey Card -->
             <div class="journey-item">
               <span></span>
               <div class="journey-item-content">
@@ -285,14 +336,18 @@
           </div>
         </div>
       </section>
+
+      <!--=====   Skills Section code   =====-->
       <section class="section skills-section linked-section" id="skills">
         <h2 class="section-heading">
           Technical <span class="gradient-text">Skills</span>
         </h2>
         <div class="skills-container">
+          <!-- Technical Skills container -->
           <div class="skills-div">
             <h3>Frontend Development</h3>
             <div class="development-skills">
+              <!-- HTML skill card -->
               <div class="skill-card">
                 <div class="skill-text">
                   <ul>
@@ -304,6 +359,7 @@
                   <div class="skill-progress html-bar" data-width="90%"></div>
                 </div>
               </div>
+              <!-- CSS skill card -->
               <div class="skill-card">
                 <div class="skill-text">
                   <ul>
@@ -315,6 +371,7 @@
                   <div class="skill-progress css-bar" data-width="85%"></div>
                 </div>
               </div>
+              <!-- Bootstrap skill card -->
               <div class="skill-card">
                 <div class="skill-text">
                   <ul>
@@ -329,6 +386,7 @@
                   ></div>
                 </div>
               </div>
+              <!-- JavaScript skill card -->
               <div class="skill-card">
                 <div class="skill-text">
                   <ul>
@@ -340,33 +398,36 @@
                   <div class="skill-progress js-bar" data-width="80%"></div>
                 </div>
               </div>
+              <!-- Tailwind skill card -->
               <div class="skill-card">
                 <div class="skill-text">
                   <ul>
                     <li>Tailwind CSS</li>
                   </ul>
-                  <span>60%</span>
+                  <span>65%</span>
                 </div>
                 <div class="skill-bar">
                   <div
                     class="skill-progress tailwind-bar"
-                    data-width="60%"
+                    data-width="65%"
                   ></div>
                 </div>
               </div>
+              <!-- React.js skill card -->
               <div class="skill-card">
                 <div class="skill-text">
                   <ul>
                     <li>React.js</li>
                   </ul>
-                  <span>50%</span>
+                  <span>60%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress react-bar" data-width="50%"></div>
+                  <div class="skill-progress react-bar" data-width="60%"></div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- Tools used in coding container -->
           <div class="tools-div">
             <h3>Tools & Software</h3>
             <div class="tools-skills">
@@ -434,25 +495,28 @@
           </div>
         </div>
       </section>
+
+      <!--====    Projects Section code     ====-->
       <section class="section projects-section linked-section" id="projects">
         <h2 class="section-heading">
           My <span class="gradient-text">Projects</span>
         </h2>
         <div class="projects-container">
+          <!-- Landing Page Project -->
           <div class="project-card">
             <div class="project-image">
               <img
                 src="./assets/images/Landing-page.webp"
                 width="280px"
                 alt="Landing page website image"
+                loading="lazy"
               />
             </div>
             <div class="project-details">
               <div class="project-category">Landing Page</div>
               <h3 class="project-title">Task Flow</h3>
               <p class="project-info">
-                A modern landing page built with a clean and responsive
-                interface.
+               A clean and responsive landing page with an intuitive UI, interactive elements, and a polished design optimized for different screen sizes.
               </p>
               <div class="project-technologies">
                 <span>HTML</span>
@@ -477,12 +541,14 @@
               </a>
             </div>
           </div>
+          <!-- Task Manger Project -->
           <div class="project-card">
             <div class="project-image">
               <img
                 src="./assets/images/DoIt-task-mange.webp"
                 width="280px"
                 alt="DoIt Task Manager"
+                loading="lazy"
               />
             </div>
             <div class="project-details">
@@ -497,6 +563,7 @@
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
+                <span>LocalStorage</span>
               </div>
               <a
                 class="github-code-btn"
@@ -516,12 +583,14 @@
               </a>
             </div>
           </div>
+          <!-- AsmaUlHusana Project -->
           <div class="project-card">
             <div class="project-image">
               <img
                 src="./assets/images/Asma-ul-husna.webp"
                 width="280px"
                 alt="Asma-ul-husana website"
+                loading="lazy"
               />
             </div>
             <div class="project-details">
@@ -557,7 +626,10 @@
           </div>
         </div>
       </section>
+
+      <!--====    Contact Section Code    ====-->
       <section class="section contact-section linked-section" id="contact">
+        <!-- Left content of contact section -->
         <section class="contact-left">
           <h2 class="section-heading">Get In Touch</h2>
           <h3>Let's work <span class="gradient-text">together</span></h3>
@@ -573,6 +645,7 @@
             <span><i class="ri-map-pin-2-line"></i></span>
             <span>Arifwala, Punjab, Pakistan</span>
           </div>
+          <!-- Contact Section Social Icons -->
           <div class="social-links">
             <span>Connect with me</span>
             <div>
@@ -611,6 +684,7 @@
             </div>
           </div>
         </section>
+        <!-- Right Contact Form of contact section -->
         <section class="contact-right">
           <form>
             <div class="label-input">
@@ -654,8 +728,11 @@
         </section>
       </section>
     </main>
+
+    <!--====        Footer       =====-->
     <footer>
       <section class="section footer-section">
+        <!-- Footer logo container -->
         <div class="footer-logo-container">
           <div class="footer-logo">
             <img
@@ -673,6 +750,7 @@
             Focused on clean code and exceptional UI/UX.
           </p>
         </div>
+        <!-- Footer Quick Links container -->
         <div class="footer-links">
           <h4>Quick Navigation</h4>
           <ul>
@@ -693,8 +771,9 @@
             </li>
           </ul>
         </div>
+        <!-- Footer social Links container -->
         <div class="footer-social-links">
-          <span>Connect with me</span>
+          <span class="jumpText">Connect with me</span>
           <div>
             <a
               href="https://github.com/munir005"
@@ -731,6 +810,7 @@
           </div>
         </div>
       </section>
+      <!-- Footer Copy Right content -->
       <div class="copyright">
         <p>
           &copy;2026 Munir Hussain.
@@ -738,9 +818,17 @@
         </p>
       </div>
     </footer>
+    <!-- Go to top Button -->
     <a href="#home" aria-label="Go to top" class="back-to-top"
       ><i class="ri-arrow-up-line"></i
     ></a>
+    <!-- GSAP main CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <!-- GSAP Scroll Trigger CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <!-- GSAP Text Animation CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <script src="./script.js"></script>
+    <script src="./animate.js"></script>
   </body>
 </html>
